@@ -260,10 +260,6 @@ https://students-stress-prediction.streamlit.app/
 
 ### Pyarasani Srinivas
 
-- B.Tech Computer Science Engineering
-- Certified Pega System Architect (CSA)
-- Data Analytics & Machine Learning Enthusiast
-
 ### Connect With Me
 
 🔗 GitHub
