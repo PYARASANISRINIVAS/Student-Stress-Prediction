@@ -1,6 +1,6 @@
 # 🎓 Student Stress Prediction System
 
-A Machine Learning web application that predicts whether a student is likely to be **Stressed** or **Relaxed** based on lifestyle, academic, and personal factors. The application is powered by a **K-Nearest Neighbors (KNN) Classifier** and deployed on **Streamlit Community Cloud**.
+A Machine Learning web application that predicts whether a student is likely to be **Stressed** or **Relaxed** based on lifestyle, academic, and personal factors. The application is powered by a **K-Nearest Neighbors (KNN) Classifier**, achieving **80% prediction accuracy**, and is deployed on **Streamlit Community Cloud**.
 
 ## 🌐 Live Demo
 
@@ -12,9 +12,9 @@ https://students-stress-prediction.streamlit.app/
 
 ## 📌 Project Overview
 
-Student stress can be influenced by various factors such as sleep patterns, study habits, social media usage, attendance, exam pressure, and family support. This project leverages Machine Learning to analyze these factors and provide a stress prediction in real time.
+Student stress is influenced by various lifestyle and academic factors such as sleep patterns, study habits, social media usage, attendance, exam pressure, and family support. This project leverages Machine Learning to analyze these factors and predict whether a student is likely to be stressed or relaxed.
 
-The application allows users to enter their details through an intuitive web interface and instantly receive a prediction.
+The application provides an interactive interface where users can enter their details and receive an instant prediction powered by a trained KNN classification model.
 
 ---
 
@@ -22,10 +22,11 @@ The application allows users to enter their details through an intuitive web int
 
 - Interactive Streamlit Web Application
 - Real-Time Stress Prediction
-- Simple and User-Friendly Interface
+- User-Friendly Interface
 - Machine Learning-Based Classification
 - Deployed on Streamlit Community Cloud
 - Supports Multiple Student Categories
+- Instant Prediction Results
 
 ---
 
@@ -34,6 +35,7 @@ The application allows users to enter their details through an intuitive web int
 This project uses the **Student Lifestyle and Stress Prediction Dataset** available on Kaggle.
 
 🔗 Dataset:
+
 https://www.kaggle.com/datasets/sridevilavanyacse/student-lifestyle-and-stress-prediction-dataset
 
 ### Features Used
@@ -51,8 +53,10 @@ https://www.kaggle.com/datasets/sridevilavanyacse/student-lifestyle-and-stress-p
 
 ### Target Variable
 
-- **0 → Stressed**
-- **1 → Relaxed**
+| Value | Meaning |
+|---------|---------|
+| 0 | Stressed |
+| 1 | Relaxed |
 
 ---
 
@@ -73,13 +77,39 @@ https://www.kaggle.com/datasets/sridevilavanyacse/student-lifestyle-and-stress-p
 
 **K-Nearest Neighbors (KNN) Classifier**
 
-The model was trained using lifestyle and academic factors from the dataset and serialized using Joblib for deployment.
+The KNN classifier was trained using student lifestyle and academic data to classify stress levels. The trained model was serialized using Joblib and integrated into the Streamlit application for real-time predictions.
 
 ### Model File
 
 ```text
 knn_cls.pkl
 ```
+
+---
+
+## 📈 Model Performance
+
+The trained KNN model was evaluated using a test dataset and achieved the following results.
+
+### Overall Accuracy
+
+| Metric | Score |
+|----------|----------|
+| Accuracy | **80%** |
+
+### Classification Report
+
+| Class | Precision | Recall | F1-Score |
+|---------|---------|---------|---------|
+| Stressed (0) | 0.83 | 0.89 | 0.86 |
+| Relaxed (1) | 0.70 | 0.58 | 0.63 |
+
+### Performance Summary
+
+- ✅ Overall Accuracy: **80%**
+- ✅ Strong performance in identifying stressed students
+- ✅ Good precision and recall for stress detection
+- ✅ Suitable for educational and portfolio demonstration purposes
 
 ---
 
@@ -102,9 +132,27 @@ StudentStressPrediction/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-github-username/student-stress-prediction.git
+git clone https://github.com/PYARASANISRINIVAS/student-stress-prediction.git
 
 cd student-stress-prediction
+```
+
+### Create Virtual Environment (Optional)
+
+```bash
+python -m venv venv
+```
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### Linux / Mac
+
+```bash
+source venv/bin/activate
 ```
 
 ### Install Dependencies
@@ -117,6 +165,12 @@ pip install -r requirements.txt
 
 ```bash
 streamlit run app.py
+```
+
+The application will run locally at:
+
+```text
+http://localhost:8501
 ```
 
 ---
@@ -161,21 +215,30 @@ scikit-learn
 - Family Support
 - Month
 
-### Prediction Result
+### Prediction Output
 
+#### Relaxed Student
+
+```text
 ✅ You are relaxed!
+```
 
-or
+#### Stressed Student
 
+```text
 ❌ You are stressed!
+```
+
+> Add screenshots of your deployed application here to make the repository more attractive and professional.
 
 ---
 
 ## 🚀 Deployment
 
-This application is deployed using **Streamlit Community Cloud**.
+The application is deployed using **Streamlit Community Cloud** and can be accessed online without any installation.
 
 🔗 Live Application:
+
 https://students-stress-prediction.streamlit.app/
 
 ---
@@ -183,32 +246,41 @@ https://students-stress-prediction.streamlit.app/
 ## 🔮 Future Enhancements
 
 - Stress Probability Score
-- Model Performance Dashboard
 - Multiple Model Comparison
-- Data Visualization and Insights
-- Personalized Recommendations for Stress Management
-- User Authentication and Prediction History
+- Model Performance Dashboard
+- Feature Importance Visualization
+- Personalized Stress Management Suggestions
+- User Authentication
+- Prediction History Tracking
+- Advanced Analytics Dashboard
 
 ---
 
 ## 👨‍💻 Author
 
-**Pyarasani Srinivas**
+### Pyarasani Srinivas
 
 - B.Tech Computer Science Engineering
 - Certified Pega System Architect (CSA)
 - Data Analytics & Machine Learning Enthusiast
 
-### Connect with Me
+### Connect With Me
 
-- GitHub: https://github.com/PYARASANISRINIVAS
-- LinkedIn: https://www.linkedin.com/in/pya-srinivas/
+🔗 GitHub
+
+https://github.com/PYARASANISRINIVAS
+
+🔗 LinkedIn
+
+https://www.linkedin.com/in/pya-srinivas/
 
 ---
 
-## ⭐ If you like this project
+## ⭐ Support
 
-Please consider giving this repository a **Star ⭐** on GitHub to support the project and encourage future improvements.
+If you found this project useful, please consider giving it a **Star ⭐** on GitHub.
+
+Contributions, suggestions, and feedback are always welcome.
 
 ---
 
@@ -216,4 +288,4 @@ Please consider giving this repository a **Star ⭐** on GitHub to support the p
 
 This project is intended for educational, learning, and portfolio purposes.
 
-Dataset ownership and licensing belong to the original Kaggle dataset creator.
+The dataset belongs to its original creator on Kaggle and is used solely for academic and demonstration purposes.
