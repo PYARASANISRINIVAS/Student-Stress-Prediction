@@ -6,7 +6,7 @@ import sklearn
 
 st.title("Student Stress Prediction")
 
-model=joblib.load("D:\Data Science\DataScienceProject\StrudentStressClassification\knn_cls.pkl")
+model=joblib.load("knn_cls.pkl")
 
 
 
